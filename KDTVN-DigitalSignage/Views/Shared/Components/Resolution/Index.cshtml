@@ -1,0 +1,14 @@
+﻿﻿@{
+    List<KDTVN_DigitalSignage.Models.ResolutionModel> Resolutions = Model;
+}
+
+<select class="form-select form-select-solid" id="@ViewBag.Id" multiple data-control="select2" data-placeholder="Chọn độ phân giải">
+    <option></option>
+
+    @foreach (var item in Resolutions)
+    {
+        <option value="@item.name_resolution">@item.name_resolution</option>
+    }
+
+
+</select>

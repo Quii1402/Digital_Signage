@@ -1,0 +1,14 @@
+﻿﻿@{
+    List<KDTVN_DigitalSignage.Models.PlayListModel> PlayLists = Model;
+}
+
+<select class="form-select form-select-solid" id="@ViewBag.Id" data-control="select2" data-placeholder="Chọn bài phát" data-allow-clear="true" >
+    <option></option>
+
+    @foreach (var item in PlayLists)
+    {
+        <option value="@item.url">@item.name_playlist</option>
+    }
+
+
+</select>
